@@ -14,11 +14,14 @@
 		@import url('https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap');
 
 header{
-	margin-top: 50px;
+	
 }
-header > h1{
-	font-family: 'Ubuntu', sans-serif;
-	text-align: center;
+h1{
+  margin-left: 10%;
+}
+*{
+	font-family: 'Century Gothic', sans-serif;
+
 }
 hr{
 	border: 3px solid #666;
@@ -26,25 +29,38 @@ hr{
 	height: 0px; text-align: center;
 }
 
-  #formulario{
-    text-align: center;
-  margin-left: 19%;
+  .form{
+   width:   60%;
+   margin-left:  20%;
+  
   }
 table{
   text-align: center;
+  margin-right: 30%;
+}
+.tablita{
+  margin-right: 20%;
 }
  
 	</style>
 
+
+<br>
+<br>
+<br>
 <header>
-	<h1 class="h1">Ingreso de Datos para reparación</h1>
+  <h1>Bienvenidos Al taller de Edward Servellon SD172030</h1>
 </header>
 <br>
-<br>
-<hr>
-<br>
-<br>
-<div id="formulario" class="rounded-sm">
+
+<div class="containe row"> 
+
+<div class="container col">
+<div class="jumbotron form">
+  
+  <h1 class="display-4"><img style="width: 20%;" src="https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/car-512.png">Taller AutosAlex</h1>
+  <p class="lead">Por favor llene los siguientes datos</p>
+  <div id="formulario" class="rounded-sm">
   <div class="form-group w-75 rounded-sm">
 
     <label class="h3">Nombre del Cliente</label>
@@ -56,15 +72,16 @@ table{
     <input type="number" [(ngModel)]="dui" class="form-control"  maxlength="10" />
     <br>
     <br>
-    
+     <label class="h3">Vehiculo:</label>
+    <input type="text"  [(ngModel)]="vehiculo" class="form-control" >
+    <br>  <br>  
     <label class="h3">Costo de Reparación:</label>
     <input type="number"  [(ngModel)]="costo_reparacion" class="form-control" >
     <br>
     <br>
     
 
-    <label class="h3">Vehiculo:</label>
-    <input type="text"  [(ngModel)]="vehiculo" class="form-control" >
+   
   </div>
   <br>
  
@@ -75,9 +92,12 @@ table{
   <br>
 
 </div>
+</div> 
+</div>
 
+<div class="container col">
 
-<div class="table-responsive-sm">
+  <div class="table-responsive-sm tablita">
   <table  class="table table-striped table-dark">
     <thead>
     <tr>
@@ -101,6 +121,9 @@ table{
       </tbody>
       </table>
     </div>
+</div>
+
+</div>
 
 
 </body>
